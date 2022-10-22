@@ -30,3 +30,11 @@ print("Intercept:", model.intercept_)
 plt.scatter(diabetes_X_test, diabetes_y_test)
 plt.plot(diabetes_X_test, diabetes_predicted)
 plt.show()
+
+#Changes for Hf2022
+X_new = np.linspace(0, 3, 1000).reshape(-1, 1)
+print(X_new)
+y_prob = clf.predict_proba(X_new)
+print(y_prob)
+plt.plot(X_new, y_prob[:, 1], "g-", label="virginica")
+plt.show()
